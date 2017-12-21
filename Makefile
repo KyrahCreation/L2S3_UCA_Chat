@@ -5,7 +5,7 @@
 ## Login   <tom.partouche@kyrah.fr>
 ## 
 ## Started on  Wed Dec 20 15:57:21 2017 Tom Partouche
-## Last update Wed Dec 20 16:12:12 2017 Tom Partouche
+## Last update Thu Dec 21 14:41:36 2017 Tom Partouche
 ##
 
 NAMES	=	client		\
@@ -19,7 +19,7 @@ OBJS	=	$(SRCS:.c=.o)
 all:		$(NAMES)
 
 $(NAMES):	$(OBJS)
-		gcc -c $(SRCS)
+		gcc -Wall -c $(SRCS)
 		gcc -o client client.o
 		gcc -o server server.o
 
