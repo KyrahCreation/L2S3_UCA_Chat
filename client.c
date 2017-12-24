@@ -60,7 +60,7 @@ void    getUsername(char *username)
       fflush(stdout);
       memset(username, 0, 1000);
 
-      printf("Entrez un nom d'utilisateur: ");
+      printf("# Entrez un nom d'utilisateur: ");
       fgets(username, 18, stdin);
       trimLine(username);
       
@@ -181,7 +181,7 @@ void	userInput(info *connection)
       
       if (send(connection->socket, &msg, sizeof(message), 0) < 0)
 	{
-	  perror("# ERREUR: Envoié échoué.");
+	  perror("# ERREUR: Envoi échoué.");
 	  exit(1);
 	}
     }
@@ -207,15 +207,15 @@ void	serverOutput(info *connection)
   switch(msg.type)
     {
       case JOIN:
-	printf("%s, s'est connecté.\n", msg.username);
+	printf("# %s s'est connecté.\n", msg.username);
       break;
 
       case EXIT:
-	printf("%s s'est déconnecté.\n", msg.username);
+	printf("# %s s'est déconnecté.\n", msg.username);
       break;
 
       case GET_USERS:
-	printf("%s", msg.data);
+	printf("# %s", msg.data);
       break;
 
       case MESSAGE:
