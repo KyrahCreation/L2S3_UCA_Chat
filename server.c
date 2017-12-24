@@ -139,7 +139,7 @@ void	sendJoinMsg(info *clients, int sender)
 	    {
 	      if (send(clients[i].socket, &msg, sizeof(msg), 0) < 0)
 		{
-		  perror("# ERREUR: Envoié échoué.");
+		  perror("# ERREUR: Envoi échoué.");
 		  exit(1);
 		}
 	    }
