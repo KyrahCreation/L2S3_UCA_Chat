@@ -5,7 +5,7 @@
 ** Login   <tom.partouche@kyrah.fr>
 ** 
 ** Started on  Wed Dec 20 15:56:38 2017 Tom Partouche
-** Last update Thu Dec 21 15:05:21 2017 Tom Partouche
+** Last update Sat Dec 30 21:04:02 2017 Tom Partouche
 */
 
 #include <stdio.h>
@@ -130,7 +130,7 @@ void	joinServer(info *connection, char *address, char *port)
        break;
     }
 
-  puts("# Connexion réussie.");
+  puts("# Connexion réussie. <Appuyer sur ENTRER>");
 }
 
 void	exitChat(info *connection)

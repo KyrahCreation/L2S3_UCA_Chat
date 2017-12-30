@@ -5,7 +5,7 @@
 ** Login   <tom.partouche@kyrah.fr>
 ** 
 ** Started on  Wed Dec 20 15:56:19 2017 Tom Partouche
-** Last update Thu Dec 21 15:01:02 2017 Tom Partouche
+** Last update Sat Dec 30 20:59:58 2017 Tom Partouche
 */
 
 #include <stdio.h>
@@ -198,7 +198,7 @@ void	rcvMessage(info clients[], int sender)
 
   if ((readSize = recv(clients[sender].socket, &msg, sizeof(message), 0)) == 0)
     {
-      printf("# Déconnexion: %s.\n", clients[sender].username);
+      printf("# Déconnexion: %s\n", clients[sender].username);
       close(clients[sender].socket);                                                                   
       clients[sender].socket = 0;
       
